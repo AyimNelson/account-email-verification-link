@@ -1,0 +1,22 @@
+<h1>Log in</h1>
+
+<div class="login_header_bar">
+    <div>
+        <!-- <img src="https://i.ibb.co/4WXcLJF/Register.jpg" alt="Login" border="0" /> -->
+        <div class="log_txt">LOG IN</div>
+    </div>
+</div>
+{% for message in messages %}
+<p class="success_message">{{message}}</p>
+{% endfor %}
+<div class="card_body">
+    <form method="POST">
+        {% csrf_token %}
+        <p>{{form}}</p>
+        <p><input type="submit" value="login" class="button" /></p>
+    </form>
+    <p>
+        <i class="fas fa-check"></i> Don't have an account?
+        <a href="{% url 'signup' %}">Register</a>
+    </p>
+</div>

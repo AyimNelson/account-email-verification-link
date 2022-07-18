@@ -1,0 +1,9 @@
+<h1>This is home</h1>
+<p>
+    Hi, {{request.user}}! <br>Welcome home
+</p>
+<div>
+    <a href="{% url 'signup' %}">Register</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</div>
